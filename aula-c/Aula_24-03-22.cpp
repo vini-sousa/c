@@ -2,17 +2,15 @@
 
 using namespace std;
 
-void trocaValores (int a, int b) {
+// Aula de Ponteiro
+
+void trocaValores (int *a, int *b) {
      
     int aux;
     
-    aux = a;
-    a = b;
-    b = aux;
-    
-    cout << "VALORES DEPOIS DA TROCA: " << endl;
-	cout << "O valor de A é: " << a << endl;
-	cout << "O valor de B é: " << b << endl;
+    aux = *a;
+    *a = *b;
+    *b = aux;
     
 }
             
@@ -30,6 +28,10 @@ int main () {
 	cout << "O valor de A é: " << a << endl;
 	cout << "O valor de B é: " << b << endl;
 
-	trocaValores(a,b);
+	trocaValores(&a,&b);
+	
+	cout << "VALORES DEPOIS DA TROCA: " << endl;
+	cout << "O valor de A é: " << a << endl;
+	cout << "O valor de B é: " << b << endl;
 	
 }
